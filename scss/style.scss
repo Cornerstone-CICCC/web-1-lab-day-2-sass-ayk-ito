@@ -1,0 +1,75 @@
+@import "variables";
+@import "header";
+body {
+  font-family: $font-stack;
+  margin-top: 80px;
+}
+
+main {
+  section {
+    border-radius: 5px;
+    h2 {
+      background-color: $secondary-color;
+      position: sticky;
+      top: 4rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        max-width: 33.3%;
+      }
+    }
+    &.fruit-hover {
+      p {
+        margin: 1rem 0;
+      }
+      figcaption {
+        display: none;
+        color: white;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1rem;
+      }
+      figure {
+        position: relative;
+        img:hover {
+          & + figcaption {
+            display: inline-block;
+          }
+        }
+        margin: 0;
+
+        img {
+          max-width: 30%;
+        }
+      }
+    }
+  }
+  .back-to-top-btn {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    padding: 0.5rem;
+    a {
+      color: white;
+    }
+  }
+}
+
+//tablet
+@media (max-width: 1024px) {
+  main section .gallery img {
+    max-width: 50%;
+  }
+}
+//mobile
+@media (max-width: 767px) {
+  main section .gallery img {
+    max-width: 100%;
+  }
+}

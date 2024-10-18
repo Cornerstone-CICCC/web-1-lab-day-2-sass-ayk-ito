@@ -1,0 +1,95 @@
+header {
+  background-color: yellow;
+  color: black;
+  padding: 0.3rem;
+  margin: 0;
+  left: -0.3%;
+  font-family: "Times New Roman", Times, serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+header .logo {
+  margin: 0.5% 0;
+}
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 1% 0;
+}
+header nav ul li {
+  margin-left: 0;
+  margin-right: 1%;
+}
+header nav ul li a {
+  color: blue;
+  text-decoration: underline;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 80px;
+}
+
+main section {
+  border-radius: 5px;
+}
+main section h2 {
+  background-color: cyan;
+  position: sticky;
+  top: 4rem;
+}
+main section .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section .gallery img {
+  max-width: 33.3%;
+}
+main section.fruit-hover p {
+  margin: 1rem 0;
+}
+main section.fruit-hover figcaption {
+  display: none;
+  color: white;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1rem;
+}
+main section.fruit-hover figure {
+  position: relative;
+  margin: 0;
+}
+main section.fruit-hover figure img:hover + figcaption {
+  display: inline-block;
+}
+main section.fruit-hover figure img {
+  max-width: 30%;
+}
+main .back-to-top-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  padding: 0.5rem;
+}
+main .back-to-top-btn a {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  main section .gallery img {
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  main section .gallery img {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
